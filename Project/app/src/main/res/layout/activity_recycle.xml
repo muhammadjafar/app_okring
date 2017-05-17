@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<android.support.v7.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:id="@+id/recycler"
+    tools:context="com.example.jafarabdi.project.Recycle">
+
+</android.support.v7.widget.RecyclerView>
+<android.support.design.widget.BottomNavigationView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bottom_navigation"
+    android:layout_alignParentBottom="true"
+    android:background="@color/colorNav"
+    app:itemBackground="@color/colorNav"
+    app:itemIconTint="@drawable/nav_item_color_state"
+    app:itemTextColor="@drawable/nav_item_color_state"
+    app:menu="@menu/bottom_navigation_main">
+
+</android.support.design.widget.BottomNavigationView>
+</RelativeLayout>
