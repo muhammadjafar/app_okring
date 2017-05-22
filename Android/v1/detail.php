@@ -12,7 +12,7 @@
  
  $result = array();
  while($res = mysqli_fetch_array($r)){
-	array_push($result,array("id"=>$res['id'],"name"=>$res['username'],"email"=>$res['email']));
+	array_push($result,array("id"=>$res['id'],"name"=>$res['username'],"email"=>$res['email'],"image"=>$res['foto']));
  }
  echo json_encode(array("result"=>$result));
  mysqli_close($con);
