@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.jafarabdi.project.akun.ProfilPenjual;
+import com.example.jafarabdi.project.akun.TabProfilPenjual;
 import com.example.jafarabdi.project.login.LoginActivity;
 import com.example.jafarabdi.project.login.SharedPrefManager;
 
@@ -31,10 +32,10 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                     switch (item.getItemId()) {
                         case R.id.action_home:
                             Toast.makeText(getBaseContext(), "Message", Toast.LENGTH_SHORT).show();
-                            finish();
+                            //finish();
                             break;
                         case R.id.action_sale:
-                            Toast.makeText(getBaseContext(), "Message", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), Main3Activity.class));
                             finish();
                             break;
                         case R.id.action_chart:
@@ -42,8 +43,7 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
                             finish();
                             break;
                         case R.id.action_account:
-                            startActivity(new Intent(getApplicationContext(), ProfilPenjual.class));
-                            finish();
+                            startActivity(new Intent(getApplicationContext(), TabProfilPenjual.class));
                             break;
                     }
                     return false;

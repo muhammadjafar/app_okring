@@ -29,9 +29,12 @@
         <activity android:name=".Register" />
         <activity android:name=".login.LoginActivity" />
         <activity
-            android:name=".akun.SettingAkun"
-            android:label="@string/title_activity_setting_akun" />
-        <activity android:name=".akun.ProfilPenjual"></activity>
+            android:name=".akun.TabProfilPenjual"
+            android:label="@string/title_activity_tab_profil_penjual"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".akun.UploadPaket"
+            android:label="Tambah Produk">
+        </activity>
     </application>
 
 </manifest>

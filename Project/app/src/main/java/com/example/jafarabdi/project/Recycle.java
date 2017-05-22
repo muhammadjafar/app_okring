@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.jafarabdi.project.adapter.MyAdapter;
 import com.example.jafarabdi.project.akun.ProfilPenjual;
+import com.example.jafarabdi.project.akun.TabProfilPenjual;
 
 public class Recycle extends AppCompatActivity {
     private RecyclerView recyclerView;
@@ -30,11 +31,10 @@ public class Recycle extends AppCompatActivity {
                             break;
                         case R.id.action_chart:
                             Toast.makeText(getBaseContext(), "Message", Toast.LENGTH_SHORT).show();
-                            finish();
+                            //finish();
                             break;
                         case R.id.action_account:
-                            startActivity(new Intent(getApplicationContext(), ProfilPenjual.class));
-                            finish();
+                            startActivity(new Intent(getApplicationContext(), TabProfilPenjual.class));
                             break;
                     }
                     return false;
