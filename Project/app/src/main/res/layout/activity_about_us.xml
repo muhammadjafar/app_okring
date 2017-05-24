@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.schemas.beranda.AboutUs">
+
+    <LinearLayout
+        android:layout_width="117dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="428dp">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:text="Terpercaya"
+            android:textColor="000000"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="130dp"
+        android:layout_height="28dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="420dp">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="16"
+            android:text="Bertransaksi Mudah"
+            android:textColor="000000"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="117dp"
+        android:layout_height="17dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="232dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="232dp">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Menu Catering "
+                android:textColor="000000"
+                android:textAlignment="center" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="232dp"
+        tools:layout_editor_absoluteX="27dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Catering Online"
+            android:textColor="000000"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="336dp"
+        android:layout_height="87dp"
+        android:text="O-Kring adalah sebuah pemesanan catering online yang menyediakan banyak pilihan menu menu makanan yang beragam tentunya dengan paket paket makanan yang dikemas secara ."
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="53dp" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="122dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="19dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:text="Apa itu O-KRING?"
+            android:textAlignment="center"
+            android:textColor="000000"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="436dp"
+        tools:layout_editor_absoluteX="276dp"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        android:id="@+id/linearLayout2"></LinearLayout>
+
+    <GridLayout
+        android:layout_width="130dp"
+        android:layout_height="197dp"
+        tools:layout_editor_absoluteY="141dp"
+        tools:layout_editor_absoluteX="27dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="132dp"
+            android:layout_height="87dp"
+            app:srcCompat="@drawable/toko" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="117dp"
+        android:layout_height="190dp"
+        tools:layout_editor_absoluteY="147dp"
+        tools:layout_editor_absoluteX="233dp"
+        android:id="@+id/gridLayout">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            app:srcCompat="@drawable/food" />
+    </GridLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="117dp"
+        android:layout_height="143dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="448dp"
+        tools:layout_editor_absoluteX="233dp">
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
+            android:text="Pemesanan dijamin aman,nyaman tanpa dirugikan"
+            android:textAlignment="center"
+            android:textSize="10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="117dp"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="253dp">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:text="Terdapat banyak paket peket menu catering yang ditawarkan untuk konsumen."
+            android:textAlignment="center"
+            android:textSize="10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="129dp"
+        android:layout_height="69dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="440dp"
+        tools:layout_editor_absoluteX="27dp">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="konsumen diberi pilihan untuk membayar secara online atau secara langsung."
+            android:textAlignment="center"
+            android:textSize="10dp"/>
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="130dp"
+        android:layout_height="204dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="334dp">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            app:srcCompat="@drawable/bayar" />
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="117dp"
+        android:layout_height="177dp"
+        tools:layout_editor_absoluteX="233dp"
+        tools:layout_editor_absoluteY="337dp">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            app:srcCompat="@drawable/percaya" />
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="130dp"
+        android:layout_height="85dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="251dp">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Situs untuk pemesanan catering online yang ditujukan untuk memudahkan konsumen dalam mencari paket paket makanan yag diinginkan."
+            android:textAlignment="center"
+            android:textSize="10dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
