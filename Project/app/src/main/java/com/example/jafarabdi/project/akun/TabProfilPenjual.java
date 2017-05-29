@@ -63,16 +63,17 @@ public class TabProfilPenjual extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-        /*if (!SharedPrefManager.getInstance(this).isLoggedIn()){
+        if (!SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
-        }*/
+            finish();
+        }
         userprofil=(TextView) findViewById(R.id.usernameProfil);
         //emailprofil=(TextView) findViewById(R.id.emailProfil);
         imageView=(NetworkImageView) findViewById(R.id.imageview1);
         loadImage();
 
-        userprofil.setText(SharedPrefManager.getInstance(this).getUsername());
+        userprofil.setText(SharedPrefManager.getInstance(this).getUserNama());
         //emailprofil.setText(SharedPrefManager.getInstance(this).getUseremail());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -90,10 +91,10 @@ public class TabProfilPenjual extends AppCompatActivity {
     private void loadImage(){
         imageLoader = CustomVolleyRequest.getInstance(this.getApplicationContext())
                 .getImageLoader();
-        imageLoader.get("http://192.168.42.250/Android/upload/okring.png", ImageLoader.getImageListener(imageView,
+        imageLoader.get("http://192.168.1.16/Android/upload/okring.png", ImageLoader.getImageListener(imageView,
                 R.mipmap.ic_launcher, android.R.drawable
                         .ic_dialog_alert));
-        imageView.setImageUrl("http://192.168.42.250/Android/upload/okring.png", imageLoader);
+        imageView.setImageUrl("http://192.168.1.16/Android/upload/okring.png", imageLoader);
 
     }
 
