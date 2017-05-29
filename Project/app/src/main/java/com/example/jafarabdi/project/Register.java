@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Register extends Activity implements View.OnClickListener{
-    private EditText editTextUsername, editTextEmail, editTextPassword, editTextTelp;
+    private EditText editTextUsername, editTextEmail, editTextPassword, editTextTelp,editTextAlamat, editTextNama;
     private Button buttonRegister;
     private ProgressDialog progressDialog;
     private TextView textViewLogin;
@@ -40,9 +40,11 @@ public class Register extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         editTextUsername=(EditText) findViewById(R.id.textUsername);
+        editTextNama=(EditText) findViewById(R.id.textNama);
         editTextPassword=(EditText) findViewById(R.id.textPassword);
         editTextEmail=(EditText) findViewById(R.id.textEmail);
         editTextTelp=(EditText) findViewById(R.id.textTelp);
+        editTextAlamat=(EditText) findViewById(R.id.textAlamat);
         buttonRegister=(Button) findViewById(R.id.buttonRegister);
         textViewLogin=(TextView) findViewById(R.id.textLogin);
         progressDialog=new ProgressDialog(this);
@@ -52,8 +54,10 @@ public class Register extends Activity implements View.OnClickListener{
     private void registerUser(){
         final String email=editTextEmail.getText().toString().trim();
         final String username=editTextUsername.getText().toString().trim();
+        final String nama=editTextNama.getText().toString().trim();
         final String password=editTextPassword.getText().toString().trim();
         final String telp=editTextTelp.getText().toString().trim();
+        final String alamat=editTextAlamat.getText().toString().trim();
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
         StringRequest stringRequest=new StringRequest(Request.Method.POST, Constants.URL_REGISTER, new Response.Listener<String>() {
@@ -78,9 +82,11 @@ public class Register extends Activity implements View.OnClickListener{
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params=new HashMap<>();
                 params.put("username", username);
-                params.put("email", email);
+                params.put("nama", nama);
                 params.put("password", password);
+                params.put("email", email);
                 params.put("telp", telp);
+                params.put("alamat", alamat);
                 return params;
             }
         };
