@@ -21,6 +21,8 @@ public class SharedPrefManager {
     private static final String KEY_USER_NAME="username";
     private static final String KEY_USER_EMAIL="useremail";
     private static final String KEY_USER_ID="userid";
+    private static final String KEY_USER_NAMA="usernama";
+    private static final String KEY_USER_FOTO="userfoto";
 
     private SharedPrefManager(Context context) {
         mCtx=context;
@@ -31,12 +33,14 @@ public class SharedPrefManager {
         }
         return mInstance;
     }
-    public boolean userLogin(int id, String username, String email){
+    public boolean userLogin(int id, String username, String email, String nama, String foto){
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putInt(KEY_USER_ID, id);
         editor.putString(KEY_USER_NAME, username);
         editor.putString(KEY_USER_EMAIL, email);
+        editor.putString(KEY_USER_NAMA, nama);
+        editor.putString(KEY_USER_FOTO, foto);
         editor.apply();
         return true;
     }
@@ -61,5 +65,13 @@ public class SharedPrefManager {
     public String getUseremail(){
         SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_USER_EMAIL, null);
+    }
+    public String getUserNama(){
+        SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_USER_NAMA, null);
+    }
+    public String getUserFoto(){
+        SharedPreferences sharedPreferences=mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getString(KEY_USER_FOTO, null);
     }
 }

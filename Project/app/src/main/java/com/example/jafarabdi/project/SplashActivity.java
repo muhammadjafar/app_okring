@@ -7,8 +7,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.os.Handler;
 
+import com.example.jafarabdi.project.beranda.Home;
+
 public class SplashActivity extends Activity {
-    private static int splashInterval=2000;
+    private static int splashInterval=1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,7 @@ public class SplashActivity extends Activity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashActivity.this, Main2Activity.class);
+                Intent intent=new Intent(SplashActivity.this, Home.class);
                 startActivity(intent);
                 this.finish();
             }

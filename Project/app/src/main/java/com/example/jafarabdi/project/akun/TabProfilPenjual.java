@@ -1,5 +1,6 @@
 package com.example.jafarabdi.project.akun;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -18,11 +19,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.jafarabdi.project.R;
+import com.example.jafarabdi.project.connect.Constants;
 import com.example.jafarabdi.project.connect.CustomVolleyRequest;
 import com.example.jafarabdi.project.login.LoginActivity;
 import com.example.jafarabdi.project.login.SharedPrefManager;
@@ -45,6 +54,7 @@ public class TabProfilPenjual extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,9 +70,10 @@ public class TabProfilPenjual extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        listView=(ListView) findViewById(R.id.list);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(mViewPager);
+        //TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        //tabLayout.setupWithViewPager(mViewPager);
         if (!SharedPrefManager.getInstance(this).isLoggedIn()){
             finish();
             startActivity(new Intent(this, LoginActivity.class));
@@ -73,7 +84,7 @@ public class TabProfilPenjual extends AppCompatActivity {
         imageView=(NetworkImageView) findViewById(R.id.imageview1);
         loadImage();
 
-        userprofil.setText(SharedPrefManager.getInstance(this).getUserNama());
+        //userprofil.setText(SharedPrefManager.getInstance(this).getUserNama());
         //emailprofil.setText(SharedPrefManager.getInstance(this).getUseremail());
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -91,10 +102,10 @@ public class TabProfilPenjual extends AppCompatActivity {
     private void loadImage(){
         imageLoader = CustomVolleyRequest.getInstance(this.getApplicationContext())
                 .getImageLoader();
-        imageLoader.get("http://192.168.1.16/Android/upload/okring.png", ImageLoader.getImageListener(imageView,
+        imageLoader.get(Constants.PATH_IMAGE+SharedPrefManager.getInstance(this).getUserFoto(), ImageLoader.getImageListener(imageView,
                 R.mipmap.ic_launcher, android.R.drawable
                         .ic_dialog_alert));
-        imageView.setImageUrl("http://192.168.1.16/Android/upload/okring.png", imageLoader);
+        imageView.setImageUrl(Constants.PATH_IMAGE+SharedPrefManager.getInstance(this).getUserFoto(), imageLoader);
 
     }
 

@@ -24,6 +24,7 @@ import com.example.jafarabdi.project.R;
 import com.example.jafarabdi.project.Register;
 import com.example.jafarabdi.project.akun.ProfilPenjual;
 import com.example.jafarabdi.project.akun.TabProfilPenjual;
+import com.example.jafarabdi.project.beranda.Home;
 import com.example.jafarabdi.project.connect.Constants;
 import com.example.jafarabdi.project.connect.RequestHandler;
 
@@ -68,9 +69,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                                 SharedPrefManager.getInstance(getApplicationContext()).userLogin(
                                         object.getInt("id"),
                                         object.getString("username"),
-                                        object.getString("email")
+                                        object.getString("email"),
+                                        object.getString("nama"),
+                                        object.getString("foto")
                                 );
-                                startActivity(new Intent(getApplicationContext(), Main2Activity.class));
+                                startActivity(new Intent(getApplicationContext(), Home.class));
                                 finish();
                             }else {
                                 Toast.makeText(getApplicationContext(), object.getString("message"), Toast.LENGTH_LONG).show();
